@@ -20,4 +20,4 @@
 			over-writing the installed ones
 
 ## CI build status
-[![Build Status](https://www.myget.org/BuildSource/Badge/)](https://www.myget.org/)
+[![Build Status](https://www.myget.org/BuildSource/Badge/psns-common?identifier=7c88509d-6d81-451d-b4f7-8a3a2b45be5e)](https://www.myget.org/)
