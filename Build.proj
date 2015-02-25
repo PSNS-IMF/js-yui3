@@ -8,7 +8,7 @@
     <MenuRoot>src\yui3-gallery\build\gallery-sm-menu\</MenuRoot>
   </PropertyGroup>
 
-  <Target Name="Build" DependsOnTargets="Minify;Deploy" />
+  <Target Name="Build" DependsOnTargets="Deploy" />
 
   <UsingTask TaskName="JavaScriptCompressorTask" AssemblyFile="packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.Build.MsBuild.dll" />
   <Target Name="Minify">
@@ -26,7 +26,7 @@
        />
   </Target>
 
-  <Target Name="Deploy">
+  <Target Name="Deploy" DependsOnTargets="Minify">
     <Copy SourceFiles="$(MenuRoot)gallery-sm-menu-debug.js;$(MenuRoot)gallery-sm-menu-debug.js"
       DestinationFiles="$(OutputLocation)gallery-sm-menu-debug.js;$(OutputLocation)gallery-sm-menu.js" />
     
