@@ -4,7 +4,7 @@
   <PropertyGroup>
     <ProjectName>Yui3</ProjectName>
     <PackageName>Psns.Common.Javascript.$(ProjectName)</PackageName>
-    <OutputLocation>nuget\content</OutputLocation>
+    <OutputLocation>nuget\content\</OutputLocation>
     <MenuRoot>src\yui3-gallery\build\gallery-sm-menu\</MenuRoot>
   </PropertyGroup>
 
