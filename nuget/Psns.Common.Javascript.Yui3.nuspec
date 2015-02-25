@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Psns.Common.Javascript.Yui3</id>
+    <title>Psns Customized Yui3</title>
+    <authors>Jeff Purcell</authors>
+    <owners>109.14</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Contains customized Yui3 files</description>
+    <projectUrl>https://github.com/PSNS-IMF/js-yui3</projectUrl>
+    <licenseUrl>https://github.com/PSNS-IMF/js-yui3/blob/master/LICENSE.md</licenseUrl>
+    <releaseNotes>
+      ## 1.0.0.3
+      ### Bug Fixes
+      * Fixed issue with menu showing undefined for missing menu item titles
+
+      ## 1.0.0.2
+      ### Bug Fixes
+      * Fixed issue with install.ps1 not removing files from project if gallery path didn't exist
+
+      ## 1.0.0.1
+      ### Bug Fixes
+      * Prevent adding YUI files to project
+
+      ## 1.0.0.0
+      ### Features
+      * Added custom gallery-sm-menu that will display HTML titles on menu nodes
+    </releaseNotes>
+    <version>1.0.0.3</version>
+    <tags>PSNS yui javascript yui3 yui3-gallery</tags>
+  </metadata>
+  <files>
+    <file src="tools\**\*.*" target="tools" />
+    <file src="content\**\*.*" target="content" />
+  </files>
+</package>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <ProjectName>Yui3</ProjectName>
+    <PackageName>Psns.Common.Javascript.$(ProjectName)</PackageName>
+    <OutputLocation>nuget\content</OutputLocation>
+    <MenuRoot>src\yui3-gallery\build\gallery-sm-menu\</MenuRoot>
+  </PropertyGroup>
+
+  <Target Name="Build" DependsOnTargets="Minify;Deploy" />
+
+  <UsingTask TaskName="JavaScriptCompressorTask" AssemblyFile="packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.Build.MsBuild.dll" />
+  <Target Name="Minify">
+    <MakeDir Directories="$(OutputLocation)" />
+
+    <ItemGroup>
+      <!-- Single files, listed in order of dependency -->
+      <JavaScriptFiles Include="$(MenuRoot)gallery-sm-menu-debug.js"/>
+    </ItemGroup>
+
+    <JavaScriptCompressorTask
+          SourceFiles="@(JavaScriptFiles)"
+          DeleteSourceFiles="false"
+          OutputFile="$(OutputLocation)gallery-sm-menu-min.js"
+       />
+  </Target>
+
+  <Target Name="Deploy">
+    <Copy SourceFiles="$(MenuRoot)gallery-sm-menu-debug.js;$(MenuRoot)gallery-sm-menu-debug.js"
+      DestinationFiles="$(OutputLocation)gallery-sm-menu-debug.js;$(OutputLocation)gallery-sm-menu.js" />
+    
+    <MakeDir Directories="Build" />
+    <Exec Command="$(Nuget) pack nuget\$(PackageName).nuspec -NoPackageAnalysis -verbosity detailed -o Build" />
+  </Target>
+</Project>

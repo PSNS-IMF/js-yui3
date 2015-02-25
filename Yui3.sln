@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F287E710-9895-4BE1-9BF2-954E454997D2}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.bat = build.bat
+		Build.proj = Build.proj
+		src\yui3-gallery\build\gallery-sm-menu\gallery-sm-menu-debug.js = src\yui3-gallery\build\gallery-sm-menu\gallery-sm-menu-debug.js
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yui3.UnitTests", "test\Yui3.UnitTests\Yui3.UnitTests.csproj", "{B0F1279D-CDC0-4D12-AA73-6BF71FD18A21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C3956A0B-CB55-4C43-A3D2-845D9E80B3B2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{10509997-D7ED-4494-874E-1ECBBBBA5263}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\Psns.Common.Javascript.Yui3.nuspec = nuget\Psns.Common.Javascript.Yui3.nuspec
+		nuget\readme.txt = nuget\readme.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{FAF1C683-4EE1-4A0B-9732-30F3CF40F036}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\tools\install.ps1 = nuget\tools\install.ps1
+		nuget\tools\uninstall.ps1 = nuget\tools\uninstall.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0F1279D-CDC0-4D12-AA73-6BF71FD18A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F1279D-CDC0-4D12-AA73-6BF71FD18A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F1279D-CDC0-4D12-AA73-6BF71FD18A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F1279D-CDC0-4D12-AA73-6BF71FD18A21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAF1C683-4EE1-4A0B-9732-30F3CF40F036} = {10509997-D7ED-4494-874E-1ECBBBBA5263}
+	EndGlobalSection
+EndGlobal
